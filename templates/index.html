@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+{% block content %}
+  <section class="hero">
+    <h1>Welcome to Simple Bank</h1>
+    {% if not current_user.is_authenticated %}
+      <div class="cta">
+        <a class="btn" href="{{ url_for('register') }}">Create account</a>
+        <a class="btn outline" href="{{ url_for('login') }}">Sign in</a>
+      </div>
+    {% else %}
+      <a class="btn" href="{{ url_for('dashboard') }}">Go to Dashboard</a>
+    {% endif %}
+  </section>
+{% endblock %}

@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+{% block content %}
+  <h2>Dashboard</h2>
+  <div class="card">
+    <p class="balance-label">Current Balance</p>
+    <p class="balance">₹ {{ '%.2f'|format(balance) }}</p>
+    <div class="actions">
+      <a class="btn" href="{{ url_for('deposit') }}">Deposit</a>
+      <a class="btn" href="{{ url_for('withdraw') }}">Withdraw</a>
+      <a class="btn" href="{{ url_for('transfer') }}">Transfer</a>
+      <a class="btn outline" href="{{ url_for('transactions') }}">View Transactions</a>
+    </div>
+  </div>
+{% endblock %}

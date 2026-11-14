@@ -1,0 +1,29 @@
+# Virtual environments
+venv/
+venv_windows_backup/
+env/
+.venv/
+
+# Database & Instance folder
+instance/
+*.db
+*.sqlite
+*.sqlite3
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+
+# macOS system files
+.DS_Store
+
+# IDE / Editor files
+.vscode/
+.idea/
+
+# VTU / Practice text files
+[1-4].txt
